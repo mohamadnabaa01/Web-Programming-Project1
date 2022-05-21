@@ -1,0 +1,595 @@
+.navbar{
+    display: inline-flex;
+    background-color: blueviolet;
+    width: 100%;
+    padding-bottom: 10px;
+    border: 3px purple solid;
+}
+.navbar img{
+    display: flex;
+    height: 100px;
+    width: 200px;
+}
+.navbar ul{
+    font-size: 25px;
+}
+.navbar li{
+    display: inline-flex;
+    margin-left: 100px;
+}
+.navbar a{
+    text-decoration: none;
+    color: beige;
+}
+.navbar a:hover{
+    color: blueviolet;
+    background-color: beige;
+    background-size: 100px;
+}
+.slide-show{
+    overflow: hidden;
+    height: 500px;
+    width: 728px;
+    margin: 0 auto;/*slideshow that exchanges between 3 pictures*/
+}
+.slide-wrapper{
+    width: 3000px;
+    animation: slide 20s infinite; /*the duration of each slideshow is 20s, and it will repeat infinite times*/
+}
+.image-container{
+    margin-top: 50px;
+    float: left;
+    height: 500px;
+    width: 728px;
+}
+.image-container:nth-child(1){/*definition of one picture as a child of the image container*/
+    background-image: url(cans.jpg);
+    background-repeat: no-repeat;
+}
+.image-container:nth-child(2){
+    background-image: url(fruits.jpg);
+    background-repeat: no-repeat;
+}
+.image-container:nth-child(3){
+    background-image: url(breads.jpg);
+    background-repeat: no-repeat;
+}
+@keyframes slide {/*used to determine the size of each picture slide and its percentage*/
+    20%{margin-left: 0px}
+    30%{margin-left: -728px}
+    50%{margin-left: -728px}
+    60%{margin-left: -1456px}
+    70%{margin-left: -1456px}
+}
+.banner{
+    background-color: blueviolet;
+    color: beige;
+}
+.banner h1{
+    font-size: 40px;
+}
+.cans{
+    display: inline-block;/*the image and text are displayed in one block*/
+    background-image: url(cans2.jpg);
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    background-size: cover;
+    padding: 200px 100px 200px 100px;
+}
+.cans-p{
+    background-color: #333;
+    color: beige;
+    background-clip: content-box;/*the text is displayed on a box*/
+    padding: 20px;
+    opacity: 0.8;/*the text and background color of the text have decreased opacity so that it doesn't hide the background image. Thus the background image will appear behind the text and backgroud color*/
+}
+.products-banner{
+    background-color: blueviolet;
+    text-align: center;
+    margin-top: 25px;
+    opacity: 0.8;/*the small text and its background color will be a little clear to see the background image*/
+}
+.products-banner a{
+    text-decoration: none;
+    color: beige;
+    font-size: 35px;
+}
+.products-banner a:hover{
+    color: blue;
+}
+.fruits{
+    background-image: url(fruits2.jpg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    border-radius: 50px;
+    background-size: cover;
+    padding: 200px 100px 200px 100px;
+}
+.fruits-p{
+    background-color: brown;
+    color: beige;
+    background-clip: content-box;
+    padding: 20px;
+    opacity: 0.8;
+}
+.breads{
+    background-image: url(breads2.jpg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    border-radius: 50px;
+    background-size: cover;
+    padding: 200px 100px 200px 100px;
+}
+.breads-p{
+    background-color:gray;
+    color: beige;
+    background-clip: content-box;
+    padding: 20px;
+    opacity: 0.8;
+}
+.meats{
+    background-image: url(meats.jpg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    border-radius: 50px;
+    background-size: cover;
+    padding: 200px 100px 200px 100px;
+}
+.meats-p{
+    background-color: rgb(156, 149, 163);
+    color: beige;
+    background-clip: content-box;
+    padding: 20px;
+    opacity: 0.8;
+}
+.cheese{
+    background-image: url(cheese2.jpg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    border-radius: 50px;
+    background-size: cover;
+    padding: 200px 100px 200px 100px;
+}
+.cheese-p{
+    background-color: rgb(156, 149, 163);
+    color: beige;
+    background-clip: content-box;
+    padding: 20px;
+    opacity: 0.8;
+}
+.grid-container{/*definition of grid of automatic columns and rows due to the number of grid elements*/
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 50px;
+    grid-gap: 5px;
+}
+#grid-style{
+    width: 400px;
+    height: 300px;
+}
+.grid-item-item1 img{
+    grid-area: 1/1/ span 1/3;/*this image will occupy 2 columns on the same row*/
+    width: 500px !important;/*is used so that new width is dominated*/
+    height: 300px;
+} 
+.grid-item-item1 img:hover{
+    zoom: 90%;
+}
+.grid-item-item2 img{
+    grid-area: 2/1/ span 2/2;
+}
+.grid-item-item2 img:hover{
+    zoom: 90%;
+}
+.grid-item-item3 img{
+    grid-area: 2/2/ span 2/3;
+}
+.grid-item-item3 img:hover{/*when the user hovers over the image, it will be zoomed*/
+    zoom: 90%;
+}
+.grid-item-item4 img{
+    width: 500px !important;
+    height: 300px;
+    grid-area: 3/1/ span 3/3;
+}
+.grid-item-item4 img:hover{
+    zoom: 90%;
+}
+.grid-item-item5 img{
+    grid-area: 4/1/ span 4/2;
+}
+.grid-item-item5 img:hover{
+    zoom: 90%;
+}
+.grid-item-item6 img{
+    grid-area: 4/2/ span 4/3;
+}
+.grid-item-item6 img:hover{
+    zoom: 90%;
+}
+footer{
+    background-color: #333;
+    color: beige;
+    padding: 20px;    
+}
+.footer-list li{
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.footer-element-list li{
+    display: flex;
+    flex-direction: row;
+}
+.footer-element-list li a{
+    color: beige;
+    text-decoration: none;
+}
+.follow-us-style{
+    margin-left: 5px;
+}
+.header-list{
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+ol{
+    list-style-type: none;
+}
+.product-wrapper{
+    width: 300px;
+    height: 400px;
+    border: lightgray 2px solid;
+    margin-right: 18px;
+}
+.product-wrapper:hover{
+    border: yellow 2px solid;
+}
+
+.best-sellers{
+    margin-top: 30px;
+    border: 5px blueviolet solid;
+    margin-bottom: 30px;
+}
+.new-arrivals{
+    border: 5px blueviolet solid;
+    margin-bottom: 30px;
+}
+.promotions-wrapper{
+    width: 300px;
+    height: 500px;
+    border: lightgray 2px solid;
+    margin-right: 18px;
+}
+.promotions{
+    border: 5px blueviolet solid;
+    margin-bottom: 30px;
+}
+.promotions-wrapper:hover{
+    border: yellow 2px solid;
+}
+.brand img{
+    width: 200px;
+    height: 150px;
+    border: 2px gray solid;
+    margin-left: 20px;
+}
+.brands{
+    border: 5px blueviolet solid;
+    margin-bottom: 30px;
+}
+ul{
+    display: inline-flexbox;
+    list-style-type: none;
+}
+li{
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-direction: column;/*used to align the list items on the same row next to each other*/
+}
+.main-img-style{
+    width: 1300px;
+    height: 400px;
+}
+.img-style{
+    width: 300px;
+    height: 250px;
+}
+.p-style{
+    font-size: 25px;
+}
+.about-us{
+    color: beige;
+    background-color: blueviolet;
+}
+.paragraph{
+    background-color: blueviolet;
+    color: beige;
+    padding: 50px;
+}
+.paragraph2{
+    margin-top: 500px;
+    background-color: blueviolet;
+    color: beige;
+    padding: 50px;
+}
+ol li{
+    display: flex;
+}
+
+.side{
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    padding: 25px 15px;
+    height: 100%;
+    display: block;
+    background-color: #010101;
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+    z-index: 9;
+}
+
+.side.on{
+    right: 0;
+}
+body{
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+body.on-side{
+    margin-left: -280px;
+}
+
+.side .close-side{
+    float: right;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+}
+ul.cart-list{
+    padding: 0 !important;
+}
+
+ul.cart-list > li{
+    position: relative;
+    border-bottom: solid 1px #efefef;
+    padding: 15px 15px 23px 15px !important;
+}
+@media only screen and (min-width: 1200px){
+    .grid-container{
+        grid-template-columns: auto auto auto;
+    }
+    .products-banner a{
+        font-size: 20px;
+    }
+    .p-style{
+        font-size: 25px;
+    }
+    .slide-show{
+        width: 900px;
+        height: 600px;
+    }
+    .slide-wrapper{
+        width: 3500px;
+    }
+    @keyframes slide {/*used to determine the size of each picture slide and its percentage*/
+        20%{margin-left: 0px}
+        30%{margin-left: -900px}
+        50%{margin-left: -900px}
+        60%{margin-left: -1800px}
+        70%{margin-left: -1800px}
+    }
+    .image-container{
+        width: 900px;
+        height: 600px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .cans{
+        background-size: contain;
+    }
+    .cans-p{
+        margin-top: -100px;
+    }
+    .fruits{
+        background-size: contain;
+    }
+    .fruits-p{
+        margin-top: -100px;
+    }
+    .meats{
+        background-size: contain;
+    }
+    .meats-p{
+        margin-top: -100px;
+    }
+    .breads{
+        background-size: contain;
+    }
+    .breads-p{
+        margin-top: -100px;
+    }
+    .cheese{
+        background-size: contain;
+    }
+    .cheese-p{
+        margin-top: -100px;
+    }
+    .banner{
+        background-size: contain;
+        padding-bottom: -50px;
+    }
+    .banner h1{
+        font-size: 25px;
+    }
+    .products-banner a{
+        font-size: 15px;
+    }
+    .grid-container{
+        grid-template-columns: auto auto;/*grid of 2 columns*/
+    }
+    .product-wrapper{
+        width: 200px;
+        height: 300px;
+    }
+    .main-img-style{
+        width: 100%;
+        height: 300px;
+    }
+    .img-style{
+        width: 200px;
+        height: 150px;
+    }
+    .p-style{
+        font-size: 20px;
+    }
+    .header-list{
+        font-size: 15px;
+    }
+} 
+@media only screen and (max-width: 768px){
+    .cans{
+        background-size: contain;
+    }
+    .cans-p{
+        margin-top: -200px;
+    }
+    .fruits{
+        background-size: contain;
+    }
+    .fruits-p{
+        margin-top: -200px;
+    }
+    .meats{
+        background-size: contain;
+    }
+    .meats-p{
+        margin-top: -200px;
+    }
+    .breads{
+        background-size: contain;
+    }
+    .breads-p{
+        margin-top: -200px;
+    }
+    .cheese{
+        background-size: contain;
+    }
+    .cheese-p{
+        margin-top: -200px;
+    }
+    .banner{
+        background-size: contain;
+        padding-bottom: -100px;
+    }
+    .banner h1{
+        font-size: 25px;
+    }
+    .products-banner a{
+        font-size: 10px;
+    }
+    .grid-container{
+        margin-top: 100px;
+        grid-template-columns: auto;/*grid of 1 column*/
+    }
+    #grid-style{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .cans{
+        background-size: contain;
+    }
+    .cans-p{
+        margin-top: -200px;
+    }
+    .fruits{
+        background-size: contain;
+    }
+    .fruits-p{
+        margin-top: -200px;
+    }
+    .meats{
+        background-size: contain;
+    }
+    .meats-p{
+        margin-top: -200px;
+    }
+    .breads{
+        background-size: contain;
+    }
+    .breads-p{
+        margin-top: -200px;
+    }
+    .cheese{
+        background-size: contain;
+    }
+    .cheese-p{
+        margin-top: -200px;
+    }
+    .banner{
+        background-size: contain;
+        padding-bottom: -200px;
+    }
+    .banner h1{
+        font-size: 25px;
+    }
+    .products-banner a{
+        font-size: 15px;
+    }
+    .grid-container{
+        margin-top: 100px;
+        grid-template-columns: auto;/*grid of 1 column*/
+    }
+    #grid-style{
+        width: 100%;
+    }
+    .slide-show{
+        width: 500px;
+        height: 300px;
+    }
+    .slide-wrapper{
+        width: 1500px;
+    }
+    li{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    .about-us{
+        color: beige;
+        background-color: blueviolet;
+    }
+    .paragraph{
+        background-color: blueviolet;
+        color: beige;
+        padding: 50px;
+    }
+    ul{
+        list-style-type: square;
+    }
+    .paragraph2{
+        margin-top: 500px;
+        background-color: blueviolet;
+        color: beige;
+        padding: 50px;
+    }
+    @keyframes slide {
+        20%{margin-left: 0px}
+        30%{margin-left: -500px}
+        50%{margin-left: -500px}
+        60%{margin-left: -1500px}
+        70%{margin-left: -1500px}
+    }
+}
